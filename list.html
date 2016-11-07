@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Book Management System</title>
+    <title>Book List</title>
 
     <!-- Bootstrap이 jQuery를 기반으로 만들어졌기 때문에 jQuery를 위쪽에 붙여야 해 -->
     <script
@@ -26,8 +26,7 @@
   <body>
 
 
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Book Management System</a>
+          <a class="navbar-brand" href="#" style="font-family:'Georgia', '나눔고딕', 'Nanum Gothic', sans-serif;color:beige;font-weight: bold;font-size: 35px">Book Management System</a>
         </div>
 
 
@@ -47,11 +46,18 @@
             <li><a href="index.html">HOME</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-center">
+            <li ><a href="list.html">도서관리</a></li>
+            <li><a href="services.html">대여 및 반납관리</a></li>
+            <li><a href="commentForm.html">서평관리</a></li>
+            <li><a data-target="#loginmodal" data-toggle="modal" style="font-family: '나눔고딕', 'Nanum Gothic', sans-serif;color:dodgerblue;font-weight: bold;font-size: 14px" class="inout" >로그인</a></li>
 
           </ul>
-          <span class="navbar-form navbar-right">
 
+
+
+
+          <span class="navbar-form navbar-right">
             <input type="text" id="keyword" class="form-control" placeholder="Search..."
                    onkeyup="searchBook()">
           </span>
@@ -83,9 +89,12 @@
                   <th>책 제목</th>
                   <th>책 저자</th>
                   <th><a href="#" onclick="mySort()">책 가격</a></th>
-                  <th>상세정보</th>
                   <th>삭제</th>
                   <th>수정</th>
+                  <th>상세정보</th>
+                  <th>서평쓰기</th>
+                  <th>서평보기</th>
+
 
                 </tr>
 

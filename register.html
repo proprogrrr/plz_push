@@ -19,35 +19,54 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/carousel.css" rel="stylesheet">
     <script src="assets/js/zforregister.js"></script>
+    <script src="assets/js/zforlogin.js"></script>
 
   </head>
 
   <body>
 
 
-     <h1> register</h1>
+      <div id="contentArea">
+       <section id="contents">
+         <h2 class="subTit mb40">회원가입</h2>
 
-        <table border="2">
-          <tr align="center">
-            <td colspan="2">회원가입<hr></td>
-          </tr>
-          <tr>
-            <td>ID</td>
-            <td><input type="text" class="id" size="20"></td>
-          </tr>
-          <tr>
-            <td>Pssword</td>
-            <td><input type="password" class="password" size="20"></td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td><input type="text" class="email" size="20"></td>
-          </tr>
-          <tr align ="center">
-            <button id="in" onclick="registerInfo()">등록하기</button>
-          </tr>
 
-  </table>
+
+           <table class="tstyle2 mb20">
+             <colgroup>
+             <col width="20%"><col width="*">
+             </colgroup>
+             <tbody>
+
+           <tr>
+             <th scope="row"><label for="ID">ID</label></th>
+             <td><input type="text" id="id" name="id" class="inputBox1" /></td>
+           </tr>
+
+           <tr>
+             <th scope="row"><label for="password">비밀번호</label></th>
+             <td>
+               <input type="password" id="password" name="password" class="inputBox1" />
+             </td>
+           </tr>
+
+           <tr>
+             <th scope="row"><label for="email">EMAIL</label></th>
+             <td>
+               <input type="text" id="email" name="email" class="inputBox1"/>
+             </td>
+           </tr>
+
+
+           </tbody>
+         </table>
+         <div class="tac">
+
+           <button id="join">가입하기</button>
+
+         </div>
+       </section>
+     </div>
 
 
 

@@ -39,6 +39,11 @@ function insertBook(){
 
 
 
+
+
+
+/*
+
 $(function() {
 
 	// image file load
@@ -53,6 +58,10 @@ $(function() {
 		reader.readAsDataURL(e.target.files[0]);
 	}
 });
+*/
+
+
+
 
 
 
@@ -152,6 +161,8 @@ $(function() {
 
                  var infoTd=$("<td></td>").append(infobtn);
 
+
+				 
 
 
 				 ////////////////////////////도서 정보 수정//////////////////////////////
@@ -346,13 +357,25 @@ $(function() {
 				 var updatebtnTd = $("<td></td>").append(updatebtn);
 
 
+				 /////////////////////////////////////서평관리////////////////////////////////
+
+				 var comment = $("<button id='comment' >서평쓰기</button>");
+				 var review = $("<button id='review' >서평보기</button>");
+
+				 var commentTd = $("<td></td>").append(comment);
+				 var reviewTd = $("<td></td>").append(review);
+
 				 tr.append(bookImgTd);
 				 tr.append(titleTd);
 				 tr.append(authorTd);
 				 tr.append(priceTd);
-				 tr.append(infoTd);
+
 				 tr.append(deleteTd);
 				 tr.append(updatebtnTd);
+				 tr.append(infoTd);
+				 tr.append(commentTd);
+				 tr.append(reviewTd);
+
 
 
 
@@ -408,7 +431,6 @@ $(document).on('click', '#delete', function() {
 
 
 
-
 function mySort() {
 		var rows = $("table").find("tbody>tr").get();
 		rows.sort(function (a, b) {
@@ -429,3 +451,91 @@ function mySort() {
 
 
 
+
+
+
+$(document).on('click', '#comment', function() {
+
+	localStorage.isbn = $(this).parent().parent().attr("data-isbn");
+	localStorage.title = $(this).parent().parent().find("#title").text();
+	localStorage.author = $(this).parent().parent().find("#author").text();
+	localStorage.img = $(this).parent().parent().find("#img").attr("src");
+
+	$(location).attr("href","commentForm.html");
+
+});
+
+
+$(document).on('click', '#review', function() {
+
+	localStorage.reviewisbn = $(this).parent().parent().attr("data-isbn");
+	$(location).attr("href","commentList.html");
+
+});
+
+
+
+/*
+
+$(document).on('click', '#com', function() {
+
+	localStorage.isbn = $(this).parent().parent().attr("data-isbn");
+	localStorage.title = $(this).parent().parent().find("#title").text();
+	localStorage.author = $(this).parent().parent().find("#author").text();
+
+	$(location).attr("href","commentForm.html");
+
+});
+
+*/
+
+
+
+
+
+
+
+$(function(){
+
+	var xx ="f";
+
+	$.ajax({
+
+		// url : 서버 프로그램에 대한 url
+		url:"http://localhost:7070/finalweb/session",
+		// type: 전송방식
+
+		type: "GET",
+		// 만약 서버쪽에서 보내주는 데이터가 JSON이면
+
+		dataType : "jsonp",
+		//클라이언트가 서버쪽에 보내주는 데이터
+
+		jsonp : "callback",
+
+		data:{
+			quit : xx
+
+		},
+
+		//서버쪽 프로그램을 실행시키는 과정이 성공하면
+		success : function(result){
+
+			if(result==true){
+
+				$(".inout").text("로그아웃");
+				$(".inout").attr("href","").attr("id","out");
+			}
+			else{
+
+				$(".inout").text("로그인");
+			}
+
+		},
+		//서버쪽 프로그램을 실행시키는 과정이 실패하면!!
+		error : function(){
+			alert("세선체크 서버 에러!!");
+		}
+	});
+
+});

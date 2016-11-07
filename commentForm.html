@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="naver-site-verification" content="a9bc858bf227dcd5a7b0e740c1ce48fc5ef6427c"/>
+
+    <title>Book Comment</title>
+
+    <!-- Bootstrap이 jQuery를 기반으로 만들어졌기 때문에 jQuery를 위쪽에 붙여야 해 -->
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>서평</title>
+
+    <link href='http://notosanskr-hestia.s3-website-ap-northeast-1.amazonaws.com/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet'>
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <script src=assets/js/z.js></script>
+    <script src="assets/js/zbookComment.js"></script>
+    <script src=assets/js/zforlogout.js></script>
+    <script src="assets/js/z.js"></script>
+    <script src="assets/js/zforlogin.js"></script>
+    <script src="assets/js/zforregister.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+<section>
+
+</section>
+
+<div align="right"><span id="inout" style="font-family: '나눔고딕', 'Nanum Gothic', sans-serif;color:dodgerblue;font-weight: bold;font-size: 14px"><a data-target="#loginmodal" data-toggle="modal" style="font-family: '나눔고딕', 'Nanum Gothic', sans-serif;color:dodgerblue;font-weight: bold;font-size: 14px" class="inout">로그인</a></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+
+
+
+
+
+    <div id="contentArea">
+        <section id="contents">
+            <h2 class="subTit">서평 등록</h2>
+            <div class="currentLocation">
+            </div>
+
+
+
+                <input type="hidden" id="gg" name="cmd" value="write" />
+
+                <table class="tstyle2 mb20 cb">
+                    <colgroup>
+                        <col width="20%"><col width="*">
+                    </colgroup>
+                    <tbody>
+
+                    <tr>
+                        <th scope="row"><span class="asterisk colorStyle1"></span>ID</th>
+                        <td>
+                            <input type="text" id="id" name="id" class="inputBox1" maxlength="6"/> <label for="id"></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><span class="asterisk colorStyle1"></span>password</th>
+                        <td>
+                            <input type="password" id="pw" name="password" class="inputBox1" maxlength="6"/> <label for="pw"></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><span class="asterisk colorStyle1"></span>제목</th>
+                        <td>
+                            <input id="text" type="text" name="title" value="" class="inputBox1" style="width:716px" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="last"><span class="asterisk colorStyle1"></span>내용</th>
+                        <td class="last">
+                            <textarea name="content" id="content" class="textBox1" style="height:178px" title="내용 입력"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            <div class="tac">
+                <button id="comment">서평 저장</button>
+
+            </div>
+        </section>
+
+
+   </div>
+
+</body>
+</html>
