@@ -1,0 +1,544 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body,header,nav,section,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,blockquote{margin:0;padding:0}
+hr{display:none}
+img, fieldset{border:0 none}
+h1, h2, h3, h4, h5, dl, dt, dd, th, td, div, p,form, fieldset, select, legend, input,
+label, textarea{font-family:'Noto Sans Korean','맑은 고딕', 'dotum', sans-serif;color:#666;font-size:12px}
+ul, ol, li{list-style:none outside}
+input, select, textarea{vertical-align:middle;font-family:'Noto Sans Korean','맑은 고딕', 'dotum', sans-serif}
+table{border-collapse:collapse;width:100%}
+address, em{font-style:normal}
+img{vertical-align:top}
+th, td, li, p{line-height:1.2}
+a{color:#666;text-decoration:none}
+caption{display:none}
+article, aside, hgroup, header, footer, figure, figcaption, nav, section{display:block}
+
+/* ================  layout  ==================== */
+html, body, #wrap{height:100%;font-family: '나눔고딕', 'Nanum Gothic', sans-serif;}
+
+
+body > #wrap{width:100%;height:auto;min-height:100%;background-color:#edf1f2}
+#header{width:100%;padding-top:4px;}
+#headArea{width:100%;height:90px;padding-top:34px;position:relative;background-color: #222222;}
+#headArea .commonLink{position:absolute;top:67px;right:0}
+#headArea .commonLink a{display:inline-block}
+#headArea .commonLink a:nth-child(2){margin-left:12px}
+
+#main{text-align: center;font-size:20pt;line-height:130px;font-family: 'Noto Sans Korean', sans-serif}
+#bookimg{text-align: center}
+#title{display:table-cell; vertical-align:middle;height: 110px}
+
+#gnb{position:absolute;top:130px;left:0;z-index:800}
+#gnb ul{width:1000px;height:70px;overflow:hidden;background-color:#2e3641}
+#gnb ul li{width:142px;float:left}
+#gnb ul li.gnb01{width:148px}
+#gnb > ul > li > ul {height:116px;background-color:#333a44;padding-top:30px}
+#gnb > ul > li > ul > li{float:none;width:142px;text-align:center}
+#gnb > ul > li > ul.subDep1 > li{width:148px;text-align:center}
+#gnb > ul > li > ul > li > a {display:block;line-height:2;font-size:14px;letter-spacing:-1px;color:#b5b5b5}
+#gnb > ul > li > ul.subDep1 > li > a.on{color:#ffaa00}
+#gnb > ul > li > ul.subDep2 > li > a.on{color:#fe7a57}
+#gnb > ul > li > ul.subDep3 > li > a.on{color:#fe666b}
+#gnb > ul > li > ul.subDep4 > li > a.on{color:#5298ef}
+#gnb > ul > li > ul.subDep5 > li > a.on{color:#05a3a9}
+#gnb > ul > li > ul.subDep6 > li > a.on{color:#ae8eff}
+#gnb > ul > li > ul.subDep7 > li > a.on{color:#78b660}
+#contentArea{padding-bottom:220px;}
+
+.sbtn{margin-top:10px;}
+
+#contents{width:1200px;margin:0 auto;padding:50px 50px 140px 50px;background-color:white;position:relative}
+#contents1{width:1200px;height:700px;margin:0 auto;padding:50px 50px 140px 50px;background-color:white;position:relative}
+#footer{width:100%;height:50px;margin-top:-50px;background-color:#343537;}
+#footer .sponsorList{display:none;width:100%;height:310px;position:absolute;top:-310px;left:0;background-color:#fff;z-index:500}
+#footer .sponsorList ul{width:1000px;padding-top:40px;margin:0 auto;overflow:hidden}
+#footer .sponsorList ul li{float:left;margin:0 0 30px 0;width:220px;text-align:center}
+#footArea{width:1000px;overflow:hidden;margin:0 auto;position:relative}
+#footArea address{float:left;margin:33px 30px 0 0}
+#footArea address p{font-size:11px;color:#adafae;line-height:1.8;letter-spacing:-1px}
+#footArea ul{float:left;margin-top:35px}
+#footArea ul li{float:left;margin-right:20px}
+#footArea ul li:nth-child(1){margin-right:30px;padding-top:7px}
+#footArea ul li:nth-child(3){margin-right:0;padding-top:2px}
+#footArea .sponsor{float:right}
+.currentLocation{position:absolute;top:78px;right:50px}
+.currentLocation span{display:inline-block;margin-left:15px;font-size:14px;color:#777;letter-spacing:-1px}
+.currentLocation a{display:inline-block;margin-left:15px;padding-right:20px;background:url(/images/contest/contest2015/common/bg_current.gif) no-repeat right 5px;
+    font-size:14px;font-weight:normal;color:#242b37;letter-spacing:-1px}
+.currentLocation *{vertical-align:middle}
+.location{position:absolute;top:103px;right:50px;padding:15px;background-color:#f7f7f7;z-index:900;display:none}
+.location li{margin-bottom:10px}
+.location li a{display:block;font-size:12px;color:#666}
+
+/* ================  common  ==================== */
+.mb5{margin-bottom:5px !important;} .mb10{margin-bottom:10px} .mb15{margin-bottom:15px !important;} .mb20{margin-bottom:20px !important;} .mb25{margin-bottom:25px}
+.mb30{margin-bottom:30px !important;} .mb40{margin-bottom:40px} .mb50{margin-bottom:50px} .mb60{margin-bottom:60px} .mb70{margin-bottom:70px}
+.mt15{margin-top:15px !important;} .mr0{margin-right:0 !important;} .ml20{margin-left:20px}
+.tac{text-align:center} .tar{text-align:right} .tal{text-align:left}
+.fl{float:left}
+.cb{clear:both}
+.dibk{display:inline-block}
+.vam *{vertical-align:middle}
+.hasLayout{width:100%;overflow:hidden;}
+.colorStyle1{color:#f66c47 !important;} .colorStyle2{color:#999} .colorStyle3{color:#78b660 !important;}
+.brNone{border-right:0 !important;}
+
+/* ================  table  ==================== */
+.tstyle1{margin-bottom:50px;border-top:2px solid #242b37}
+.tstyle1 thead th{padding:13px 0 12px;font-size:14px;color:#242b37;border-bottom:1px solid #242b37}
+.tstyle1 thead th *{vertical-align:middle}
+.tstyle1 tbody td{padding:13px 0 12px;font-size:14px;color:#444;text-align:center;border-bottom:1px solid #e0e0e0}
+.tstyle1 tbody td *{vertical-align:middle}
+.tstyle1 tbody td.title{text-align:left;padding:13px 0 12px 10px}
+.tstyle1 tbody td.title a{color:#444}
+.tstyle1 tbody td.title a strong{color:#222}
+.tstyle1 tbody td.complete{color:#05a3a9}
+.tstyle1 tbody td.postNum{color:#777}
+.tstyle2{border-top:2px solid #242b37;border-bottom:1px solid #242b37}
+.tstyle2 tbody th{padding:13px 0 12px 20px;font-size:14px;color:#242b37;text-align:left;border-bottom:1px solid #ededed}
+.tstyle2 tbody th *{vertical-align:middle}
+.tstyle2 tbody th.last{border-bottom:0}
+.tstyle2 tbody th.guideTop{height:30px;line-height:30px;padding:0 0 0 20px;border-bottom:0}
+.tstyle2 tbody th label{font-size:14px;color:#242b37}
+.tstyle2 tbody th span.writing{display:inline-block;margin-left:10px;padding-right:30px;background:url(/images/contest/contest2015/news/bg_line.gif) no-repeat right 4px}
+.tstyle2 tbody th span.asterisk{font-size:10px;margin-right:10px}
+.tstyle2 tbody td{padding:13px 0 12px;font-size:14px;color:#666;border-bottom:1px solid #ededed}
+.tstyle2 tbody td *{vertical-align:middle}
+.tstyle2 tbody td.last{border-bottom:0}
+.tstyle2 tbody td.award{padding:13px 20px 12px 0;line-height:1.5;word-wrap:break-word}
+.tstyle2 tbody td.guideTop{height:30px;line-height:30px;padding:0 0 0 20px;border-bottom:0}
+.tstyle2 tbody td p{margin-bottom:10px;font-size:13px;letter-spacing:-1px;color:#999}
+.tstyle2 tbody td p.uptake{color:#666}
+.tstyle2 tbody td span.note{margin-left:10px;font-size:13px;color:#999}
+.tstyle2 tbody td span.over{margin-left:10px;font-size:13px;color:blue}
+.tstyle2 tbody td span.hits{display:inline-block;margin-top:-5px;padding-left:13px;background:url(/images/contest/contest2015/news/bg_line.gif) no-repeat 0 3px}
+.tstyle3 thead th{padding:12px 0 11px;text-align:center;font-size:14px;color:#444;border-right:1px solid #ededed;border-bottom:1px solid #ededed}
+.tstyle3 tbody td{padding:12px 0 11px 30px;text-align:left;font-size:14px;color:#777;border-right:1px solid #ededed;border-bottom:1px solid #ededed}
+.tstyle4{border-top:2px solid #232b36;border-bottom:1px solid #232b36}
+.tstyle4 thead th{padding:12px 0 11px;text-align:center;font-size:14px;color:#444;border-right:1px solid #232b36;border-bottom:1px solid #232b36}
+.tstyle4 tbody td{padding:12px 0 11px;text-align:center;font-size:14px;color:#777;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0}
+.tstyle4 tbody td.organ{color:#444}
+.tstyle4 tbody td.intro{padding:12px 7px 11px;line-height:1.4}
+.tstyle4 tbody td.last{border-bottom:0}
+.tstyle5{border-top:1px solid #e0e0e0;border-left:1px solid #e0e0e0}
+.tstyle5 tbody th{padding:12px 0 11px 20px;font-size:14px;color:#242b37;text-align:left;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;
+    background-color:#f7f7f7}
+.tstyle5 tbody td{padding:12px 0 11px 20px;font-size:14px;color:#666;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0}
+.tstyle5 tbody td p{font-size:14px;}
+.tstyle5 tbody td div{font-size:14px;}
+.tstyle5 tbody td span{font-size:14px;}
+.tstyle6{border-top:1px solid #242b37;border-bottom:1px solid #242b37}
+.tstyle6 thead th{padding:12px 0 11px;text-align:center;font-size:14px;color:#242b37;border-right:1px solid #242b37;border-bottom:1px solid #242b37}
+.tstyle6 thead th.brNone{border-right:0}
+.tstyle6 tbody td{padding:12px 0 11px;text-align:center;font-size:14px;color:#666;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;
+    line-height:1.4}
+.tstyle6 tbody td span{margin-bottom:14px;display:block;color:#444}
+.tstyle6 tbody td.brNone{border-right:0}
+.tstyle6 tbody td.united{background-color:#f7f7f7;border-right:0;border-bottom:1px solid #242b37}
+.tstyle6 tbody td.bgcolor{background-color:#f7f7f7}
+.tstyle6 tbody td.last{border-bottom:0}
+
+/* ================  input, select, textarea  ==================== */
+.inputBox1{width:248px;height:24px;line-height:24px;padding:0 5px;border:1px solid #ddd;color:#666}
+.inputBox2{width:260px;height:30px;line-height:30px;padding:0 10px 5px 40px;border:1px solid #ddd;background-color:#f7f7f7;margin-top: 3px;margin-right: 5px}
+.inputBox3{width:680px;height:50px;line-height:30px;padding:0 5px;border:1px solid #ddd;background-color:#f7f7f7;margin-top: -6px;font-size: 18px}
+
+.textBox1{width:706px;height:63px;padding:10px;border:1px solid #ddd;font-size:13px;color:#666;line-height:1.5}
+.selBox{width:178px;height:24px;border:1px solid #ddd;background-color:#f7f7f7}
+
+/* ================  메인 페이지  ==================== */
+#mainCont{width:1000px;min-height:1200px;margin:0 auto;position:relative}
+.mainblock p{margin-bottom:30px;font-size:20px;color:#222;text-align:center}
+.mainblock1{width:488px;height:584px;position:absolute;top:40px;left:0}
+.mainblock1 .slides .mainbanner1{width:488px;height:584px;background:url(/images/contest/contest2015/main/bg_detailList.gif) no-repeat 0 0;}
+.mainblock1 .slides .mainbanner2{width:488px;height:584px;background:url(/images/contest/contest2015/main/bg_detailList.gif) no-repeat 0 0;}
+.mainblock1 .slides .mainbanner1 h3{margin-bottom:22px;padding-top:70px;text-align:center}
+.mainblock1 .slides .mainbanner2 h3{margin-bottom:30px;padding-top:64px;text-align:center}
+.mainblock1 .slides li p{font-size:15px;color:#fff;text-align:center}
+.mainblock1 .slides li p.date{margin:0 0 12px 0}
+.mainblock1 .slides li p.bannerTxt1{margin:30px 0 15px 0;font-size:14px}
+.mainblock1 .slides li p.bannerTxt2{font-size:14px}
+#mainblock1 .flex-control-nav {width:100%;position:absolute;top:544px;text-align:center;}
+.flex-control-nav li{margin:0 5px;display: inline-block;zoom:1;*display: inline;}
+.flex-control-paging li a{width:10px;height:10px;display:block;background:url(/images/contest/contest2015/main/visual_ctrl.png) no-repeat 0 0;cursor:pointer;text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+.flex-control-paging li a.flex-active{background:#fff;cursor:default;}
+.mainblock2{position:absolute;top:40px;left:512px;padding-top:40px;width:232px;height:240px;background:url(/images/contest/contest2015/main/bg_notice.gif) no-repeat 0 0}
+.mainblock2 p{margin-bottom:130px;}
+.mainblock2 p.noticeTit{padding:0 25px;margin-bottom:8px;font-size:15px;color:#444;line-height:1.5}
+.mainblock2 p.noticeDate{margin-bottom:0;font-size:14px;color:#999;}
+
+.mainblock3{padding-top:75px;width:232px;height:205px;background:url(/images/contest/contest2015/main/bg_day.png) no-repeat 0 0;position:absolute;top:40px;left:768px}
+.mainblock3 p{margin-bottom:12px;font-size:30px;color:#fff}
+.mainblock3 p.dday{margin-bottom:14px;padding-left:60px;font-size:50px;font-weight:bold;color:#fff}
+
+.mainblock4{padding-top:30px;width:488px;height:250px;position:absolute;top:648px;left:0;background-color:#f8f9fa}
+.mainblock4 .excellent_case{margin-bottom:25px;font-size:20px;color:#666;text-align:center}
+.rolling{position:relative;width:428px;height:175px;margin:0 0 0 30px}
+.prev{position:absolute;top:50px;left:0;z-index:10000}
+.next{position:absolute;top:50px;right:0;z-index:10000}
+.mask{width:320px !important;height:175px;position:relative;margin:0 auto;overflow:hidden;}
+.scrollMask{width:9999px;height:175px;position:absolute;left:0;}
+.scrollMask li{float:left;display:inline;margin:0 15px;width:130px;height:175px;position:relative;text-align:center}
+.scrollMask li div.rollImg{margin-bottom:12px}
+.scrollMask li p{font-size:14px;color:#666}
+.mainblock5{position:absolute;top:328px;left:512px;z-index:500}
+.mainblock6{width:232px;height:432px;position:absolute;top:496px;left:512px;}
+.mainblock6 h3.contestTit{font-size:24px;font-weight:normal;color:#222;text-align:center;position:absolute;top:50px;left:74px;z-index:900}
+.mainblock6 .slides .field1{width:232px;height:432px;background:url(/images/contest/contest2015/main/bg_field1.jpg) no-repeat 0 0;}
+.mainblock6 .slides .field2{width:232px;height:432px;background:url(/images/contest/contest2015/main/bg_field2.jpg) no-repeat 0 0;}
+.mainblock6 .slides li p.contestTxt1{margin:280px 0 15px 0;font-size:20px;color:#fff;text-align:center}
+.mainblock6 .slides li p.contestTxt2{font-size:15px;color:#fff;text-align:center}
+#carousel .flex-control-nav {width:100%;position:absolute;top:390px;text-align:center;}
+.mainblock7{position:absolute;top:344px;left:768px;}
+.mainblock7 p{padding:15px 0 49px 0;height:34px;background-color:#fff;text-align:center;font-size:15px;color:#222;line-height:1.4}
+#mainblock7 .flex-control-nav{width:100%;position:absolute;top:244px;text-align:center;}
+#mainblock7 .flex-control-paging li a{width:10px;height:10px;display:block;background:url(/images/contest/contest2015/main/btn_circle.png) no-repeat 0 0;cursor:pointer;text-indent: -9999px; -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+#mainblock7 .flex-control-nav li{margin:0 5px;display: inline-block;zoom:1;*display: inline;}
+#mainblock7 .flex-control-paging li a.flex-active{background:#000;cursor:default;}
+.mainblock8{position:absolute;top:648px;left:768px;padding-top:40px;width:232px;height:240px;background:url(/images/contest/contest2015/main/prize.gif) no-repeat 0 0}
+/* .mainblock8 p{margin-bottom:130px;font-size:20px;color:#ffea03} */
+.mainblock8 img{padding-top:142px;font-size:20px;color:#ffea03}
+.mainblock9{position:absolute;top:952px;left:0;}
+.mainblock9 div.inquiryBox{padding-top:32px;width:232px;height:96px;background-color:#f8f9fa;text-align:center}
+.mainblock9 div.inquiryBox p.inquiryTxt1{margin-bottom:15px;font-size:18px;color:#222}
+.mainblock9 div.inquiryBox p.inquiryTxt2{font-size:15px;color:#666;line-height:1.4}
+.mainblock10 {padding-top:30px;width:232px;height:250px;position:absolute;top:952px;left:256px;background-color:#fff;}
+.mainblock10 div{margin-bottom:20px;text-align:center}
+.mainblock10 dl{padding-left:30px;width:202px;overflow:hidden}
+.mainblock10 dt{float:left;margin-right:13px;font-size:14px;color:#222;}
+.mainblock10 dd{font-size:14px;color:#666}
+.mainblock11{position:absolute;top:952px;left:512px}
+.mainblock12{position:absolute;top:952px;left:768px}
+.mainblock12 h3{font-size:18px;font-weight:normal;color:#222;text-align:center;position:absolute;top:30px;left:100px;z-index:900}
+#mainblock12 .flex-control-nav{width:100%;position:absolute;top:244px;text-align:center;}
+#mainblock12 .flex-control-paging li a{width:10px;height:10px;display:block;background:url(/images/contest/contest2015/main/btn_circle.png) no-repeat 0 0;cursor:pointer;text-indent: -9999px; -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+#mainblock12 .flex-control-nav li{margin:0 5px;display: inline-block;zoom:1;*display: inline;}
+#mainblock12 .flex-control-paging li a.flex-active{background:#000;cursor:default;}
+
+/* ================  서브페이지  ==================== */
+.subTit{margin-bottom:40px;font-size:36px;font-weight:bold;color:#222}
+.count{margin-bottom:15px;float:right;font-size:14px;font-weight:bold;color:#222}
+.count span{color:#08a2ac}
+.paging{text-align:center}
+.paging *{vertical-align:middle}
+.paging a{display:inline-block;margin:0 10px;font-size:18px;color:black}
+.paging a.direct{margin:0}
+.paging strong{display:inline-block;margin:0 8px;padding-top:3px;width:26px;height:23px;color:#fff;background-color:#354054;font-size:13px;text-align:center}
+
+/* ================  경진대회 소개  ==================== */
+.outline dt{float:left;margin-right:66px;padding-left:30px;font-size:24px;color:#ffaa00}
+.outline dd{font-size:15px;color:#666}
+/*.outline dd{letter-spacing:-1px\9} */
+.outline dd{letter-spacing:-1px}
+.outline dd span{display:block;margin-bottom:15px;font-size:24px;color:#444}
+/* .outline dd span{font-size:22px\9} */
+.outline dd span{font-size:22px}
+.outline1{margin-bottom:60px;padding-top:35px;height:95px;background:url(/images/contest/contest2015/intro/bg_outline1.gif) no-repeat 0 0}
+.outline1 dt{height:95px}
+.outline2{margin-bottom:70px}
+.outline2 dt{height:67px}
+.outlineTxt{margin-bottom:25px;padding:0 0 0 30px;height:80px;background:url(/images/contest/contest2015/intro/bg_outline2.gif) no-repeat 0 42px;font-size:24px;color:#ffaa00}
+.institute1{margin:0 0 50px 30px;border-top:2px solid #242b37;border-bottom:1px solid #242b37;}
+.institute1 li{border-bottom:1px dashed #b2b2b2;width:870px;overflow:hidden}
+.institute1 li:last-child{border-bottom:0}
+.institute1 li:first-child+li+li{border-bottom:0}
+.institute1 li p{float:left;padding:40px 0;width:157px;font-size:20px;color:#222}
+.institute1 li div{float:left;padding:30px 0;}
+.infor_institute{margin-left:30px;width:870px;overflow:hidden;border-top:1px solid #ccc;}
+.infor_institute dt{float:left;padding:15px 0;width:190px}
+.infor_institute dd{float:left;width:680px;}
+.infor_institute dd ul li{float:left;width:136px;height:50px;line-height:50px;text-align:left;font-size:13px;color:#888;border-bottom:1px dashed #cccccc}
+.infor_institute dd ul li.end{border-bottom:0}
+.infor_institute3 dd{padding:40px 0 40px 0}
+.infor_institute4 dd{padding:55px 0 55px 0px;width:646px;}
+.infor_institute5 dd{padding:30px 0 30px 0}
+.infor_institute6 dd{padding:55px 0 55px 6px;width:674px;}
+.infor_institute8 dd{padding:55px 0 55px 0;width:652px;}
+.require{margin-bottom:50px}
+.require dt{float:left;margin-right:100px;padding-left:30px;font-size:24px;color:#ffaa00}
+/* .require dt{margin-right:90px\9} */
+.require dt{margin-right:90px}
+.require dd{margin-bottom:20px;padding-top:6px;float:left;width:680px;overflow:hidden;font-size:15px;color:#666}
+/* .require dd{letter-spacing:-1px\9;padding-top:0\9} */
+.require dd{letter-spacing:-1px;padding-top:0}
+.require dd p{font-size:15px;color:#666;}
+/* .require dd p{letter-spacing:-2px\9;line-height:1.6\9;} */
+.require dd p{letter-spacing:-2px;line-height:1.6;}
+.require1 dt{height:104px;background:url(/images/contest/contest2015/intro/bg_require1.gif) no-repeat 0 42px}
+.require1 dd p:nth-child(2){font-size:14px;color:#999;line-height:1.6}
+.require2 dd{padding-top:3px}
+.require3 dt{height:422px;background:url(/images/contest/contest2015/intro/bg_require2.gif) no-repeat 12px 42px}
+/* .require3 dt{height:455px\9} */
+.require3 dt{height:455px}
+.require3 dd p{padding-left:14px;/*letter-spacing:-1px;*/background:url(/images/contest/contest2015/accept/bul1.gif) no-repeat 0 8px;}
+.require4 dt{height:85px;}
+.require4 dd p{float:left;padding-top:3px;}
+.require4 dd div{float:left}
+.require5 dt{height:95px;background:url(/images/contest/contest2015/intro/bg_require3.gif) no-repeat 0 42px}
+.require5 dd ul li{margin-bottom:10px;padding-left: 10px;background: url(/images/contest/contest2015/common/minus.jpg) no-repeat 0 9px;}
+.require6 dt{height:814px;background:url(/images/contest/contest2015/intro/bg_require4.gif) no-repeat 0 42px}
+.require6 dd p{padding-left:14px;/*letter-spacing:-1px;*/background:url(/images/contest/contest2015/accept/bul1.gif) no-repeat 0 8px;}
+.require6 dd ol{padding-left:14px}
+.require6 dd ol li{margin-bottom:10px}
+.require7 dd ul li{margin-bottom:15px;padding-left: 10px;background: url(/images/contest/contest2015/common/minus.jpg) no-repeat 0 9px;}
+
+/* ================  경진대회 접수  ==================== */
+.accept_way{margin-bottom:50px;width:900px;overflow:hidden}
+.accept_way dt{float:left;margin-right:100px;padding-left:30px;font-size:24px;color:#f66c47}
+/* .accept_way dt{margin-right:90px\9;letter-spacing:-1px\9} */
+.accept_way dt{margin-right:90px;letter-spacing:-1px}
+.accept_way dd{float:left;margin-bottom:15px;width:680px;font-size:15px;color:#666/* letter-spacing:-1px */}
+.accept_way dd p{font-size:15px;color:#666;/* letter-spacing:-1px */}
+.accept_way2 dt{height:180px;background:url(/images/contest/contest2015/accept/bg_acceptWay.gif) no-repeat 0 42px}
+.accept_way2 dd ul{width:680px;overflow:hidden;background:url(/images/contest/contest2015/accept/bg_acceptWayStep.gif) no-repeat 0 0}
+.accept_way2 dd ul li{float:left;margin-right:40px;text-align:center}
+.accept_way2 dd ul li:last-child{margin-right:0}
+.accept_way2 dd ul li:first-child+li+li+li{margin-right:0}  /* ie8에서 last-child가 적용이 안되는 것에 대응 하는 방식 */
+.accept_way3 dt{margin-right:28px;height:300px;}
+/* .accept_way3 dt{letter-spacing:-2px\9} */
+.accept_way3 dt{letter-spacing:-2px}
+.acceptTit{margin-bottom:20px;padding-bottom:20px;font-size:24px;letter-spacing:-1px;color:#f66c47;border-bottom:1px solid #e5e5e5}
+.acceptsTit{margin-bottom:20px;font-size:24px;letter-spacing:-1px;color:#f66c47}
+.acceptsTit2{margin-bottom:20px;font-size:24px;letter-spacing:-1px;color:#78b660}
+.acceptTxt1{margin-left: 100px;margin-bottom:20px;padding-left:13px;font-size:16px;letter-spacing:-1px;color:#444}
+.acceptTxt2{font-size:50px;letter-spacing:-1px;color:#f66c47;position:absolute;top:20px;right:0}
+.acceptTxt2 span{color:#444}
+.acceptTxt3{margin-bottom:68px;font-size:14px;letter-spacing:-1px;color:#999;}
+.acceptTxt4{margin-bottom:30px;font-size:24px;letter-spacing:-1px;color:#222;line-height:1.6}
+.acceptTxt5{font-size:13px;letter-spacing:-1px;color:#78b660;position:absolute;top:20px;right:0}
+.acceptTxt5 span{color:#78b660}
+.acceptBox{margin-bottom:20px;padding:25px 0 29px 29px;width:869px;border:1px solid #ddd;background-color:#f7f7f7}
+.acceptBox p{font-size:14px;color:#777;letter-spacing:-1px;line-height:1.6}
+.acceptBox p:nth-child(2){margin-bottom:30px;padding-left:15px}
+.acceptBox ul li{margin-bottom:5px;font-size:14px;line-height:1.4;color:#777}
+.acceptBox ul li strong{display:inline-block;width:65px;color:#444}
+.acceptBox ul li strong.item{height:20px;vertical-align:top}
+.acceptBox ul li span{display:inline-block;color:#777}
+.acceptBox ol li{margin-bottom:5px;font-size:14px;line-height:1.6;letter-spacing:-1px;color:#777}
+.acceptBox ol li span{display:inline-block;color:#777}
+.acceptBox ol li span.item{height:20px;vertical-align:top}
+.termsChk{margin-bottom:20px;float:right;font-size:13px;color:#666}
+.enterArea{position:relative}
+.input_add{width:258px;background-color:#fff}
+.acceptBtn{display:inline-block;margin-left:20px}
+.utilize{width:100%;overflow:hidden;margin-bottom:20px}
+.utilize p{font-size:14px;color:#666;margin-bottom:12px}
+.fieldList{width:726px;overflow:hidden}
+.fieldList li{float:left;margin-right:3px;}
+.fieldList li:last-child{margin-right:0}
+.fieldList li:first-child+li+li+li+li+li+li+li+li{margin-right:0}
+.fieldList li a{display:block;padding:12px 0 0 0;width:76px;height:26px;border:1px solid #ddd;text-align:center;font-size:14px;color:#999}
+.fieldList li a.on{color:#fff;background-color:#f66c47;border:1px solid #f66c47}
+.gt{float:left;margin:80px 20px 0}
+.uptakeBtn{float:left;margin:130px 0 0 7px}
+.utilizeList{float:left}
+.utilizeList ul{padding:15px 0 0 0;width:298px;height:113px;border:1px solid #ddd;overflow:auto}
+.utilizeList ul li{padding:3px 0 0 20px;width:261px;height:23px;font-size:14px;color:#777;cursor:pointer}
+.utilizeList ul li.on{color:#f66c47;background-color:#f7f7f7}
+.utilizeList ul.organList li{width:281px;height:26px;padding:0}
+.utilizeList ul.organList li a{display:block;padding:3px 0 0 20px;width:261px;height:23px;font-size:14px;color:#777}
+.utilizeList ul.organList li a.on{color:#f66c47;background-color:#f7f7f7}
+
+.uptakeBox{height:170px;overflow:auto;border-top:2px solid #242b37;border-bottom:1px solid #242b37}
+.uptakeBox table a{display:inline-block;margin:-5px 0 0 15px}
+.etc_utilize{display:none}
+.tstyle2 tbody td p.etcTxt{padding:15px 0 0 0;font-size:14px;color:#666}
+.tstyle2 tbody td p.etcTxt strong{display:block;margin-bottom:10px;font-weight:normal}
+.tstyle2 tbody td p.etcTxt span{display:block;margin-top:10px;font-size:13px;color:#999;font-weight:normal}
+
+/* ================  문화데이터 소개 ==================== */
+.culture_guide{margin-bottom:50px;width:100%;overflow:hidden}
+.culture_guide dt{float:left;margin-right:50px;padding-left:30px;width:140px;font-size:24px;color:#eb3a40;line-height:1.2;letter-spacing:-1px}
+/* .culture_guide dt{font-size:22px\9} */
+.culture_guide dt{font-size:22px}
+.culture_guide dd{float:left;margin-bottom:10px;width:680px;font-size:15px;color:#666;/* letter-spacing:-1px */}
+/* .culture_guide dd{font-size:14px\9} */
+.culture_guide dd{font-size:14px}
+.culture_guide1 dt{padding:37px 0 0 30px;height:92px;background:url(/images/contest/contest2015/culture/bg_cultures1.gif) no-repeat 0 0;}
+.culture_guide1 dd{margin-top:40px}
+.culture_guide2 dt{height:195px}
+.culture_guidesTit{padding:47px 0 0 30px;height:50px;background:url(/images/contest/contest2015/culture/bg_culturesTit.gif) no-repeat 0 0;font-size:24px;color:#eb3a40;line-height:1.2;font-weight:normal}
+.cultureList{margin-bottom:40px;width:900px;overflow:hidden}
+.cultureList li{float:left;margin-right:3px}
+.cultureList li:last-child{margin-right:0}
+.cultureList li a{display:block;padding:12px 0 0 0;width:95px;height:26px;border:1px solid #ddd;text-align:center;font-size:14px;color:#999}
+.cultureList li a.over{width:95px;height:26px;border:1px solid #eb3a40;color:#fff;background-color:#eb3a40}
+.etcCulture h4{margin-bottom:20px;font-size:20px;color:#222}
+.etcCulture dl{margin-bottom:30px;padding-bottom:30px;width:900px;overflow:hidden;border-bottom:1px dashed #b2b2b2}
+.etcCulture dl.service{margin-bottom:50px;padding-bottom:50px;border-bottom:2px solid #242b37}
+.etcCulture dl dt{float:left;margin-right:50px}
+.etcCulture dl dd{float:left;width:630px}
+.etcCulture dl dd p{font-size:15px;color:#777;letter-spacing:-1px;line-height:1.5}
+.etcCulture dl dd p.apiName{padding-left:13px;background:url(/images/contest/contest2015/accept/bul1.gif) no-repeat 0 8px;font-size:16px;color:#444}
+.etcCulture dl dt.expire{margin-right:0;padding:20px 0 20px 20px;background-color:#f7f7f7}
+.etcCulture dl dd.expire{width:610px;padding:30px 20px 17px 50px;background-color:#f7f7f7}
+.region_pub ul{width:900px;overflow:hidden}
+.region_pub ul li{margin:0 15px 30px 0;padding-bottom:30px;float:left;width:290px;height:178px;border-bottom:1px dashed #b2b2b2;text-align:center}
+.region_pub ul li.mrc{margin:0 0 30px 0}
+.region_pub ul li p{margin-bottom:20px;padding-top:15px;background-color:#f7f7f7;width:290px;height:33px;text-align:center;font-size:14px;color:#444}
+.region_pub ul li div.pubCI{height:70px}
+.excellentList li{float:left;margin:50px 33px 30px 0;width:250px;height:530px;padding-left:15px;text-align: center}
+
+.excellentList li p{margin-bottom:10px;font-size:13px;color:#222;text-align:center;}
+.excellentList li p.cname{font-size:14px;color:#777}
+.excellentCont{margin-bottom:20px;padding:30px 30px 104px 30px;border-bottom:1px solid #242b37}
+.excellentRolling{width:640px;margin:0 auto 50px}
+#visualWrap{position:relative;width:797px;height:442px;}
+#visualWrap .prev{position:absolute;top:200px;left:0;z-index:1000}
+#visualWrap .next{position:absolute;top:200px;right:0;z-index:1000}
+#visualWrap .visualmask{width:640px !important;height:360px;position:relative;margin:0 auto 15px;overflow:hidden;}
+#visualWrap .visualMask{width:9999px;height:360px;position:absolute;left:0;}
+#visualWrap .visualMask li{width:640px;height:360px;text-align:center;position:absolute;top:0;left:640px}
+#visualWrap .nextCtrl{width:640px;margin:0 auto;overflow:hidden}
+#visualWrap .nextCtrl li{float:left;margin-right:9px;display:inline}
+#visualWrap .nextCtrl li *{vertical-align:top}
+
+/* ================  공유정보  ==================== */
+.sharing_infor1 dt{float:left;margin-right:89px;padding-top:33px;width:130px;height:82px;background:url(/images/contest/contest2015/sharing/bg_sharing1.gif) no-repeat 0 0;
+    font-size:24px;color:#2e70c2}
+.sharing_infor1 dd{float:left;padding-top:38px;width:680px}
+.sharing_infor1 dd p{font-size:15px;color:#666;line-height:1.5}
+.consultingList li{margin-bottom:30px;padding-bottom:30px;border-bottom:1px dashed #b2b2b2;overflow:hidden}
+.consulting_institution{float:left;width:290px;margin-right:50px}
+.consulting_institution p{width:290px;height:44px;line-height:44px;background-color:#f7f7f7;font-size:14px;color:#444;text-align:center}
+.consultingInfor{float:left;width:560px;}
+.consultingInfor p{font-size:15px;color:#666;line-height:1.5;letter-spacing:-1px}
+.consultingInfor dl dt{font-size:15px;color:#444}
+.consultingInfor dl dd{font-size:15px;color:#666;line-height:1.6;letter-spacing:-1px}
+/* ================  경진 대회 소식  ==================== */
+.qaTop{margin-left: 100px;margin-bottom:40px;padding:20px 30px 0 30px;width:1000px;height:60px;overflow:hidden;background-color:#eeeadf}
+.qaTop p{margin:10px 0 0 0;float:left}
+.qaTop div{float:right;margin-top:-15px;margin-right:-20px;}
+.qaSearch{float:left;}
+.qaSearch select{width:72px;height:30px}
+.qaSearch1{margin:0 auto;text-align: center}
+.qaSearch1 select{width:100px;height:30px}
+.n_icon{margin-left:10px}
+.newsCont{margin-bottom:20px;padding:30px 0 60px 30px;border-bottom:1px solid #242b37;font-size:14px;color:#777;line-height:1.6}
+.newsCont1{margin-bottom:20px;padding:30px 0 60px 30px;font-size:14px;color:#777;line-height:1.6;height: 200px;}
+
+.newsCont p{font-size:14px;line-height:1.3;}
+.qaCont{padding:30px 0 30px 30px;border-bottom:1px dashed #7f7f7f;font-size:14px;color:#777;line-height:1.6}
+.newsCont dl{width:100%;overflow:hidden}
+.newsCont dt{margin-right:20px;float:left;font-size:14px;font-weight:bold;color:#f66c47}
+.newsCont dd{float:left;font-size:14px;color:#777;line-height:1.6}
+.newsTxt{margin-bottom:15px;float:right;font-size:13px;color:#f66c47}
+.pwBox{margin-bottom:20px;padding:49px 0 0 0;width:900px;height:78px;text-align:center;border-top:2px solid #242b37;border-bottom:1px solid #242b37;}
+.pwBox label{margin-right:20px;font-size:14px;color:#242b37}
+.qmark{margin-right:10px;display:inline-block}
+
+/* ================  지난경진 대회   ==================== */
+.past_heading{margin-bottom:50px;padding-bottom:50px;position:relative;overflow:hidden;border-bottom:2px solid #242b37}
+.awardTop{float:left;width:300px}
+.past_logo{margin:40px 0 40px 63px}
+.past_logo1{margin:14px 0 40px 30px}
+.past_cont{float:left;width:600px}
+.past_cont h3{margin-bottom:40px;padding-top:62px;background:url(/images/contest/contest2015/past/bg_awardTit1.gif) no-repeat 4px 2px;font-size:24px;color:#6c3fdd}
+.past_cont .info{margin-bottom:20px}
+.past_cont .info dt{float:left;padding-left:13px;width:87px;font-size:16px;color:#444;background:url(/images/contest/contest2015/accept/bul1.gif) no-repeat 0 10px}
+.past_cont .info dd{float:left;width:500px;color:#777;font-size:15px}
+.past_cont .info dd.sponsor .sponsor_list{padding-top:10px;width:503px;overflow:hidden}
+.past_cont .info dd.sponsor .sponsor_list li{float:left;margin:0 20px 25px 0}
+.past_cont .info dd.sponsor .sponsor_list li.second{margin:0 46px 25px 0}
+.past_cont .info dd.sponsor .sponsor_list li.third{margin:0 43px 25px 0}
+.past_tab{overflow:hidden;margin-bottom:42px}
+.past_tab li{float:left;margin-right:3px}
+.past_tab li a{display:inline-block;width:136px;height:38px;border: 1px solid #ddd;color:#999;font-size:14px;text-align:center;line-height: 38px}
+.past_tab li.on a{height:38px;border:1px solid #6c3fdd;background-color:#6c3fdd;color:#fff}
+.award_step dt{float:left;width:220px;color:#6c3fdd;font-size:24px}
+.award_step dd{float:left;width:680px;overflow:hidden}
+.award_step dd .winning_best{float:left;width:320px;margin:0 40px 30px 0}
+.award_step dd .winning_best h4{margin-bottom:15px;font-size:20px;color:#444;}
+.award_step dd .winning_best p{margin-bottom:20px;font-size:15px;color:#666;letter-spacing:-1px}
+.award_step dd .winning_best p em{color:#999}
+.award_step dd p.excellentTxt{margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #242b37;font-size:24px;color:#6c3fdd}
+.award_step dd .past_winning_step{clear:both;width:680px}
+.award_step dd .past_winning_step li{padding:30px 0;border-top:1px dashed #b2b2b2;overflow:hidden;}
+.award_step dd .past_winning_step li h4{margin-bottom:15px;font-size:20px;color:#444;}
+.award_step dd .past_winning_step li p{font-size:15px;color:#666;letter-spacing:-1px}
+.award_step dd .past_winning_step li p em{color:#999}
+.award_step dd .past_winning_step li .type-excellent{margin-bottom:3px;overflow:hidden;height:45px;}
+.award_step dd .past_winning_step li .type-excellent p{float:left;padding:10px 0 0 14px;background:url(/images/contest/contest2015/accept/bul1.gif) no-repeat 0 17px}
+.awardBtn{float:right}
+.past-copyright{position:relative;margin-top:30px;padding:20px 230px 20px 20px;background-color:#f7f7f7;color:#777;font-size:14px;
+    line-height:1.6;letter-spacing:-1px}
+.past-copyright span{color:#444}
+.past-copyright .mark{position: absolute;top:35px;right:20px; }
+.galleryTop{margin-bottom:40px;padding:0 30px;width:840px;height:70px;line-height:70px;background-color:#f7f7f7;font-size:16px;color:#666}
+.galleryTop span{margin-right:20px;font-size:24px;color:#6c3fdd}
+#prizeView1{height:980px;top:900px}
+#prizeView2{height:980px;top:900px}
+#prizeView3{height:636px;top:1200px}
+#prizeView4{height:636px;top:1200px}
+#prizeView5{height:636px;top:1200px}
+#prizeView6{height:636px;top:1200px}
+#prizeView7{height:636px;top:1200px}
+#prizeView8{height:636px;top:1200px}
+#prizeView9{height:636px;top:1200px}
+#prizeView10{height:636px;top:1200px}
+#prizeView11{height:636px;top:1200px}
+#prizeView12{height:636px;top:1200px}
+#prizeView13{height:636px;top:1200px}
+#prizeView14{height:636px;top:1200px}
+.prizeView{padding:4px 30px 40px 30px;width:540px;overflow:auto;background:#fff url(/images/contest/contest2015/past/pop_prizeBg.gif) no-repeat 0 0;position:absolute;left:50%;margin-left:-205px;z-index:100}
+.prizeView h3{margin-bottom:40px;padding:30px 0 30px 0;border-bottom:1px solid #d3d5d7;font-size:30px;color:#222}
+.prizeView .prizeTxt1{margin-bottom:20px;font-size:20px;color:#444}
+.prizeView .popCls{position:absolute;top:30px;right:30px}
+#alphaBox{position:absolute;left:0;top:0;width:100%;height:100%;background-color:#000;opacity:0.70;filter:alpha(opacity=70);display:none;z-index:10;}
+#galleryPop{width:792px;height:600px;background:transparent;position:absolute;top:600px;left:50%;margin-left:-380px;z-index:100}
+#galleryPop h3{font-size:40px;color:#fff;text-align:center;font-weight:normal}
+#galleryPop p{margin-bottom:30px;font-size:16px;color:#c5c5c5;text-align:center}
+#poprolling{position:relative;width:792px;height:480px;text-align:center}
+#poprolling .prev{position:absolute;top:200px;left:0;z-index:10000}
+#poprolling .next{position:absolute;top:200px;right:0;z-index:10000}
+#poprolling .mask{width:640px !important;height:480px;position:relative;margin:0 auto;overflow:hidden;}
+#poprolling .scrollMask{width:9999px;height:480px;position:absolute;left:0;}
+#poprolling .scrollMask li{float:left;display:inline;width:640px;height:480px;position:relative;text-align:center}
+#galleryPop .popCls{position:absolute;top:30px;right:0}
+
+
+/*=================== 라인 추가 ==============*/
+.lineInput{padding-left: 10px;background: url(/images/contest/contest2015/common/minus.jpg) no-repeat 0 8px;}
+.lineInput2{padding-left: 10px;background: url(/images/contest/contest2015/common/minus.jpg) no-repeat 0 8px;font-size:15px}
+#galleryPop .popCls{position:absolute;top:30px;right:0}
+
+
+/*=================== 국민의견공개 ==============*/
+.rollingOpi{position:relative;width:900px;height:300px;margin:0 0 0 0px}
+.rollingOpi  span {position:absolute; top:50%; width:18px; width:33px; height:59px; background:url('../../images/contest/contest2015/bgControl02.png') no-repeat 0 0; overflow:hidden; }
+.rollingOpi .prev{position:absolute;top:100px;left:-10px;;z-index:10000; cursor:pointer;}
+.rollingOpi .next{position:absolute;top:100px;right:-10px;z-index:10000; background-position:-34px 0; cursor:pointer; }
+.rollingOpi .mask{width: 800px !important;height:255px;position:relative;margin:0 auto;overflow:hidden;}
+.rollingOpi .scrollMask{width:9999px;height:255px;position:absolute;left:0;}
+.rollingOpi .scrollMask li{float:left;display:inline;margin:0 15px;width: 170px;height:195px;position:relative;text-align:center; border: 1px solid #333;border-bottom: 2px solid #333}
+.rollingOpi .scrollMask li div.rollImg{margin-bottom:12px}
+.rollingOpi .scrollMask li p{font-size:14px;color:#666}
+.rollingOpi h1 {height: 20px;margin: 15px 0px 0px;color:#333;font-family:'Nanum Barun Gothic';text-overflow:ellipsis;overflow:hidden;text-align: left;border: 1px solid #333;}
+.rollingOpi h2 {height: 20px;margin: -22px 0 0 73px;color:#333;font-family:'Nanum Barun Gothic';text-overflow:ellipsis;overflow:hidden;text-align: right;border: 1px solid #333;}.rollingOpi h3 { width:170px;height:126px; margin:0px 0px 0px; font-family:'Nanum Barun Gothic'; text-overflow:ellipsis; overflow:hidden; text-align: center;}
+.rollingOpi h4 { margin:30px 20px 10px; color:#333; font-size:1.84em; font-family:'Nanum Barun Gothic'; letter-spacing:-.0625em; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.rollingOpi h6 { margin:0px 0px 0px; color:#333; font-size:1.5em; font-family:'Nanum Barun Gothic'; letter-spacing:-.0625em; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.rollingOpi ol { margin: 10px 10px 10px 0px;overflow:hidden;text-align: left;}
+.rollingOpi ol li { float:left; padding:0 13px 0 5px; color:#808080; background:url('../images/common/bulArrow01.png') no-repeat 100% 50%; line-height:1; }
+.rollingOpi ol li:first-child { padding-left:0; }
+.rollingOpi ol li:last-child { padding-right:0; background-image:none; }
+
+
+.rollingOpi .scrollMask  > li > a:hover,
+.rollingOpi .scrollMask  > li > a:active,
+.rollingOpi .scrollMask  > li > a:focus { background-image:none;  text-decoration: underline; }
+.rollingOpi .scrollMask  > li > a:hover *,
+.rollingOpi .scrollMask  > li > a:active *,
+.rollingOpi .scrollMask  > li > a:focus * { color:#333; }
+.rollingOpi .scrollMask  > li > a:hover span em,
+.rollingOpi .scrollMask  > li > a:active span em,
+.rollingOpi .scrollMask  > li > a:focus span em { background-position:0 -21px; }
+
+.rollingOpi .scrollMask  > li > a.cate01:hover,
+.rollingOpi .scrollMask  > li > a.cate01:active,
+.rollingOpi .scrollMask  > li > a.cate01:focus { border-color:#6c3fdd; background-color:#6c3fdd; }
+.rollingOpi .scrollMask  > li > a.cate01:hover span,
+.rollingOpi .scrollMask  > li > a.cate01:active span,
+.rollingOpi .scrollMask  > li > a.cate01:focus span { border-color:#98b; }

@@ -7,6 +7,11 @@ $(function(){
     var checkid = null;
 
 
+    var isbn = localStorage.isbn;
+    var title = localStorage.btitle;
+    var author = localStorage.bauthor;
+    var img = localStorage.bimg;
+
     $.ajax({
         // url : 서버 프로그램에 대한 url
         url:"http://localhost:7070/finalweb/delSessionCheck",
@@ -23,6 +28,7 @@ $(function(){
         //서버쪽 프로그램을 실행시키는 과정이 성공하면
         success : function(result){
              checkid = result.id;
+
         },
         //서버쪽 프로그램을 실행시키는 과정이 실패하면!!
         error : function(){
@@ -100,7 +106,18 @@ $(function(){
         }
     });
 
-    $(document).on('click', '#delcom', function() {
+
+
+
+
+
+
+
+
+
+
+    $(document).on('click', '#delete', function() {
+
 
         alert(cid);
 
@@ -122,17 +139,27 @@ $(function(){
             //서버쪽 프로그램을 실행시키는 과정이 성공하면
             success : function(result){
 
-                alert("책 정보가 삭제되었습니다.");
+                alert("서평이 삭제되었습니다.");
 
                 $(location).attr("href","commentList.html");
 
             },
             //서버쪽 프로그램을 실행시키는 과정이 실패하면!!
             error : function(){
-                alert("에러당!!!")
+                alert("에러에러에러!!!")
             }
         });
     });
+
+
+
+
+
+
+
+
+
+
 
 
 

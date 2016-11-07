@@ -39,9 +39,6 @@ function insertBook(){
 
 
 
-
-
-
 /*
 
 $(function() {
@@ -104,19 +101,19 @@ $(function() {
 
 				 var tr=$("<tr></tr>").attr("data-isbn",result[i].isbn);
 
-				 var bookImg = $("<img />").attr("src", result[i].img);
-			     var bookImgTd = $("<td></td>").append(bookImg);
-			     var titleTd=$("<td></td>").text(result[i].title);
-				 var authorTd=$("<td></td>").text(result[i].author);
-				 var priceTd=$("<td></td>").text(result[i].price);
+				 var bookImg = $("<img id='bimg' />").attr("src", result[i].img);
+				 var bookImgTd = $("<td ></td>").append(bookImg);
+				 var titleTd=$("<td id='btitle'></td>").text(result[i].title);
+				 var authorTd=$("<td id='bauthor'></td>").text(result[i].author);
+				 var priceTd=$("<td id='bprice'></td>").text(result[i].price);
 
 				 var deleteTd = $("<td></td>").append(del);
 
 
 
-				 /////////////////////////////도서 상세 정보/////////////////////////////
-				 var infobtn=$("<input />").attr("type","button").attr("value","상세정보").attr("id","info");
-				 infobtn.on("click",function(){
+					 /////////////////////////////도서 상세 정보/////////////////////////////
+					 var infobtn=$("<input />").attr("type","button").attr("value","상세정보").attr("id","info");
+					 infobtn.on("click",function(){
 
 					 var isbn=$(this).parent().parent().attr("data-isbn");
 					 var thisTd=$(this).parent().parent().find("td:nth-child(2)");
@@ -457,18 +454,25 @@ function mySort() {
 $(document).on('click', '#comment', function() {
 
 	localStorage.isbn = $(this).parent().parent().attr("data-isbn");
-	localStorage.title = $(this).parent().parent().find("#title").text();
-	localStorage.author = $(this).parent().parent().find("#author").text();
-	localStorage.img = $(this).parent().parent().find("#img").attr("src");
+	localStorage.bimg = $(this).parent().parent().find("#bimg").attr("src");
+	localStorage.btitle = $(this).parent().parent().find("#btitle").text();
+	localStorage.bauthor = $(this).parent().parent().find("#bauthor").text();
 
 	$(location).attr("href","commentForm.html");
 
 });
 
 
+
+
 $(document).on('click', '#review', function() {
 
 	localStorage.reviewisbn = $(this).parent().parent().attr("data-isbn");
+	localStorage.bimg = $(this).parent().parent().find("#bimg").attr("src");
+	localStorage.btitle = $(this).parent().parent().find("#btitle").text();
+	localStorage.bauthor = $(this).parent().parent().find("#bauthor").text();
+
+	alert("로컬"+localStorage.reviewisbn);
 	$(location).attr("href","commentList.html");
 
 });

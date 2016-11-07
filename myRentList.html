@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="naver-site-verification" content="a9bc858bf227dcd5a7b0e740c1ce48fc5ef6427c"/>
+    <!-- jQuery CDN -->
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous">
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>대여반납</title>
+
+    <link href='http://notosanskr-hestia.s3-website-ap-northeast-1.amazonaws.com/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/styleo.css" />
+
+    <script src=assets/js/zforlogout.js></script>
+    <script src="assets/js/userRentList.js"></script>
+
+
+</head>
+
+<body>
+<section>
+</section>
+
+<div id="wrap">
+
+
+
+
+    <div id="contentArea">
+        <section id="contents1">
+            <h2 class="subTit">대여 중인 고객 리스트 조회</h2>
+            <div class="currentLocation">
+
+            </div>
+            <ul class="location">
+                <li>도서 정보</li>
+            </ul>
+
+            <!-- 검색 -->
+            <div class="qaTop">
+
+                <input id="email" type="text" name="sWord" class="inputBox3" title="검색 키워드" value="" onkeyup="searchBook()"/>
+
+                <div>
+                    <button id="myRentList" style="background-color: #393939;color:white;width:150px;height: 70px;font-size:20px">대여목록보기</button>
+                    <button id="allRentList" style="background-color: #393939;color:white;width:150px;height: 70px;font-size:20px">전체목록보기</button>
+                </div>
+            </div>
+
+
+            <!-- 검색-->
+            <ul class="excellentList hasLayout mb20" id="list">
+
+            </ul>
+
+        </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>
